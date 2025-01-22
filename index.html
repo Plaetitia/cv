@@ -6,55 +6,97 @@
     <title>CV - [Votre Nom]</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
         .container {
             max-width: 900px;
-            margin: 0 auto;
+            margin: 30px auto;
             padding: 20px;
             background-color: #fff;
-        }
-        h1, h2, h3 {
-            color: #0056b3;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
             text-align: center;
-            margin-bottom: 0;
+            font-size: 36px;
+            color: #2c3e50;
+            margin: 0;
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
         h3 {
-            margin-top: 0;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+        p, ul {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 8px;
         }
         .section {
             margin-bottom: 30px;
         }
-        .section h2 {
-            border-bottom: 2px solid #0056b3;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+        .contact-info, .skills ul, .experience ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 20px;
         }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
+        .contact-info div, .skills li, .experience li {
+            flex: 1 1 45%;
         }
-        ul li {
-            margin-bottom: 5px;
-        }
-        .skills ul, .projects ul, .experience ul {
-            columns: 2;
-            column-gap: 30px;
-        }
-        .contact-info {
-            margin-bottom: 30px;
+        .contact-info div {
+            font-weight: bold;
         }
         .footer {
             text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        .cta {
+            text-align: center;
             margin-top: 30px;
-            font-size: 0.8em;
-            color: #777;
+        }
+        .cta a {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .cta a:hover {
+            background-color: #2980b9;
+        }
+        .section-title {
+            margin-bottom: 10px;
+            color: #2980b9;
+        }
+        .project-item, .experience-item {
+            margin-bottom: 15px;
+        }
+        .project-item strong, .experience-item strong {
+            font-size: 18px;
+            color: #3498db;
         }
     </style>
 </head>
@@ -62,43 +104,41 @@
     <div class="container">
         <header>
             <h1>[Votre Nom]</h1>
-            <p><strong>Doctorat en Linguistique | Data Analyst</strong></p>
+            <p style="text-align: center; font-style: italic;">Doctorat en Linguistique | Data Analyst</p>
         </header>
 
         <section class="contact-info">
             <h2>Contact</h2>
-            <ul>
-                <li>Email : [Votre Email]</li>
-                <li>Téléphone : [Votre Téléphone]</li>
-                <li>LinkedIn : [Votre Profil LinkedIn]</li>
-                <li>Site Web : [Votre Site Web]</li>
-            </ul>
+            <div>Email : [Votre Email]</div>
+            <div>Téléphone : [Votre Téléphone]</div>
+            <div>LinkedIn : [Votre Profil LinkedIn]</div>
+            <div>Site Web : [Votre Site Web]</div>
         </section>
 
         <section class="profile">
             <h2>Profil</h2>
-            <p>Après une carrière dans l’enseignement et la recherche, j’ai développé des compétences techniques et analytiques que j’applique désormais au domaine de la data. L’esprit critique et la rigueur méthodologique cultivés tout au long de mon parcours, sont pour moi des atouts que je souhaite mettre au service de nouveaux challenges.</p>
+            <p>Après une carrière dans l’enseignement et la recherche, j’ai développé des compétences techniques et analytiques que j’applique désormais au domaine de la data. L’esprit critique et la rigueur méthodologique cultivés tout au long de mon parcours sont pour moi des atouts que je souhaite mettre au service de nouveaux challenges.</p>
         </section>
 
         <section class="formation">
             <h2>Formation</h2>
             <ul>
-                <li>2024-2025 : Data Analyst, Wild Code School Lille</li>
-                <li>2011-2017 : Doctorat en Linguistique, Université Paris Diderot</li>
-                <li>2010-2011 : Master en Sciences du Langage, Université Paris Diderot</li>
-                <li>2009-2010 : Maîtrise Études Anglophones, Université Paris Diderot</li>
+                <li><strong>2024-2025 :</strong> Data Analyst, Wild Code School Lille</li>
+                <li><strong>2011-2017 :</strong> Doctorat en Linguistique, Université Paris Diderot</li>
+                <li><strong>2010-2011 :</strong> Master en Sciences du Langage, Université Paris Diderot</li>
+                <li><strong>2009-2010 :</strong> Maîtrise Études Anglophones, Université Paris Diderot</li>
             </ul>
         </section>
 
         <section class="skills">
             <h2>Compétences Techniques</h2>
-            <h3>Outils des sciences du langage et d'enseignements</h3>
+            <h3 class="section-title">Outils des sciences du langage et d'enseignements</h3>
             <ul>
                 <li>PRAAT, WinPitch Pro (traitement du signal sonore)</li>
                 <li>Moodle, FUN MOOC (Learning Management System)</li>
             </ul>
 
-            <h3>Compétences en Data Analysis</h3>
+            <h3 class="section-title">Compétences en Data Analysis</h3>
             <ul>
                 <li>Manipulation de données : SQL, Numpy, Pandas (Python), ETL (DBT, Mage AI)</li>
                 <li>Data visualisation : PowerBI, Looker Studio, Matplotlib, Seaborn, Plotly Express</li>
@@ -111,29 +151,39 @@
 
         <section class="projects">
             <h2>Projets</h2>
-            <ul>
-                <li><strong>Projet RH niveau de satisfaction Collaborateurs</strong> - Wild Code School, 2025</li>
-                <li><strong>Création de site de recommandation de films</strong> - Wild Code School, 2025</li>
-                <li><strong>Analyse d’une base de données de vendeur de jouets</strong> - Wild Code School, 2024</li>
-                <li><strong>Kit de contact en langue Mooré</strong> - INALCO, 2021-2024</li>
-            </ul>
+            <div class="project-item">
+                <strong>Projet RH niveau de satisfaction Collaborateurs</strong> - Wild Code School, 2025
+            </div>
+            <div class="project-item">
+                <strong>Création de site de recommandation de films</strong> - Wild Code School, 2025
+            </div>
+            <div class="project-item">
+                <strong>Analyse d’une base de données de vendeur de jouets</strong> - Wild Code School, 2024
+            </div>
+            <div class="project-item">
+                <strong>Kit de contact en langue Mooré</strong> - INALCO, 2021-2024
+            </div>
         </section>
 
         <section class="experience">
             <h2>Expériences Professionnelles</h2>
-            <ul>
-                <li><strong>Enseignante de Linguistique</strong> - Université de Lille, 2019-2024</li>
-                <li><strong>Enseignante de Linguistique</strong> - Université Catholique de Lille, 2018-2023</li>
-                <li><strong>Chargée de cours et de Recherche</strong> - Université Paris Diderot, 2011–2017</li>
-            </ul>
+            <div class="experience-item">
+                <strong>Enseignante de Linguistique</strong> - Université de Lille, 2019-2024
+            </div>
+            <div class="experience-item">
+                <strong>Enseignante de Linguistique</strong> - Université Catholique de Lille, 2018-2023
+            </div>
+            <div class="experience-item">
+                <strong>Chargée de cours et de Recherche</strong> - Université Paris Diderot, 2011–2017
+            </div>
         </section>
 
         <section class="languages">
             <h2>Langues</h2>
             <ul>
-                <li>Français : Langue maternelle</li>
-                <li>Anglais : Courant (C1)</li>
-                <li>Mooré : Intermédiaire (B2)</li>
+                <li><strong>Français :</strong> Langue maternelle</li>
+                <li><strong>Anglais :</strong> Courant (C1)</li>
+                <li><strong>Mooré :</strong> Intermédiaire (B2)</li>
             </ul>
         </section>
 
@@ -145,6 +195,10 @@
                 <li>Footing</li>
             </ul>
         </section>
+
+        <div class="cta">
+            <a href="mailto:[Votre Email]">Contactez-moi</a>
+        </div>
 
         <footer class="footer">
             <p>&copy; 2025 [Votre Nom] - CV</p>
