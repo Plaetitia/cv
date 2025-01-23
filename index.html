@@ -7,88 +7,102 @@
     <style>
         /* Global styles */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color:#318ce7 ;
+            background-color: #f0f4f8;
             color: #333;
-            line-height: 1.6;
         }
+
         .container {
-            max-width: 1000px;
+            max-width: 960px;
             margin: 40px auto;
-            padding: 30px;
-            background-color: #fff;
+            padding: 20px;
+            background-color: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3 {
-            color:#318ce7 ;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0;
+
+        header {
             text-align: center;
+            margin-bottom: 30px;
         }
-        h2 {
-            font-size: 1.8rem;
-            margin-top: 30px;
-            border-bottom: 3px solid #2a3d66;
-            padding-bottom: 5px;
-        }
-        h3 {
-            font-size: 1.4rem;
+
+        header h1 {
+            font-size: 2.5rem;
             margin-bottom: 5px;
+            color: #1e87f0;
         }
-        ul {
-            list-style: none;
-            padding-left: 0;
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
         }
-        ul li {
-            margin-bottom: 8px;
-        }
+
         .section {
             margin-bottom: 30px;
         }
-        .contact-info ul, .languages ul, .hobbies ul {
+
+        h2 {
+            font-size: 1.8rem;
+            color: #1e87f0;
+            border-bottom: 2px solid #1e87f0;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .skills ul,
+        .languages ul,
+        .hobbies ul {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
         }
-        .contact-info li, .languages li, .hobbies li {
-            background-color: #f1f1f1;
-            padding: 10px;
+
+        .skills ul li,
+        .languages ul li,
+        .hobbies ul li {
+            background-color: #f8f9fc;
+            padding: 10px 15px;
             border-radius: 5px;
-            width: calc(33% - 10px);
-            box-sizing: border-box;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .skills ul {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
+
+        .project-card {
+            background-color: #f8f9fc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
-        .footer {
+
+        .project-card h4 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+            color: #1e87f0;
+        }
+
+        footer {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 30px;
             font-size: 0.9rem;
             color: #777;
         }
-        .footer a {
-            color: #2a3d66;
+
+        footer a {
+            color: #1e87f0;
             text-decoration: none;
-        }
-        .skills, .projects {
-            margin-top: 20px;
-        }
-        .project-card {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .project-card h4 {
-            margin-bottom: 10px;
-            color: #2a3d66;
         }
     </style>
 </head>
@@ -96,18 +110,19 @@
     <div class="container">
         <!-- Header Section -->
         <header>
-            <h2>style="text-align: center;Laetitia Palogo Compaoré</h1>
-             <p style="text-align: center; font-size: 1.2rem;">Doctorat en Linguistique</p>
-            <h3>style="text-align: center;Data Analyst</h1>
+            <h1>Laetitia Palogo Compaoré</h1>
+            <p>Doctorat en Linguistique - Data Analyst</p>
         </header>
 
         <!-- Contact Section -->
-        <section class="contact-info">
+        <section class="section">
             <h2>Contact</h2>
             <ul>
-
-                <li>LinkedIn : www.linkedin.com/in/laetitiapalogo</li>
-            
+                <li>Adresse : 18 Rue Augustin Bourdon, 59700 Marcq-en-Baroeul</li>
+                <li>Téléphone : 06 15 42 97 87</li>
+                <li>Email : laetitia.palogo@gmail.com</li>
+                <li>Site web : <a href="https://laetitia.github.io" target="_blank">https://laetitia.github.io</a></li>
+                <li>LinkedIn : <a href="https://www.linkedin.com/in/laetitiapalogo" target="_blank">Profil LinkedIn</a></li>
             </ul>
         </section>
 
@@ -117,44 +132,36 @@
             <p>Après une carrière dans l’enseignement et la recherche, j’ai développé des compétences techniques et analytiques que j’applique désormais au domaine de la data. L’esprit critique et la rigueur méthodologique cultivés tout au long de mon parcours sont des atouts que je souhaite mettre au service de nouveaux challenges.</p>
         </section>
 
-        <!-- Compétences de Data Analyst Section -->
-        <section class="skills">
-            <h2>Compétences Data Analyst</h2>
-            <h3>Analyse de données</h3>
+        <!-- Compétences Techniques Section -->
+        <section class="section skills">
+            <h2>Compétences Techniques</h2>
             <ul>
-                <li>SQL, Numpy, Pandas (Python), ETL (DBT, Mage AI)</li>
-                <li>PowerBI, Looker Studio, Matplotlib, Seaborn, Plotly Express</li>
-                <li>MySQL Workbench, DBeaver, Sqlite</li>
-                <li>Excel, Google Sheets, StatView</li>
-                <li>Machine Learning, NLP</li>
-            </ul>
-        </section>
-
-        <!-- Outils des sciences du langage et d'enseignements Section -->
-        <section class="section">
-            <h2>Outils des sciences du langage et d'enseignements</h2>
-            <ul>
-                <li>PRAAT, WinPitch Pro (traitement du signal sonore)</li>
-                <li>Moodle, FUN MOOC (Learning Management System)</li>
+                <li>Manipulation de données : SQL, Python (Pandas, Numpy), ETL (DBT, Mage AI)</li>
+                <li>Data Visualisation : PowerBI, Looker Studio, Matplotlib, Seaborn</li>
+                <li>Gestion de bases de données : MySQL, DBeaver, SQLite</li>
+                <li>Analyse de données : Excel, Google Sheets, StatView</li>
+                <li>Intelligence Artificielle : Machine Learning, NLP</li>
+                <li>Outils collaboratifs : Google Colab, Jupyter Notebook, Trello</li>
             </ul>
         </section>
 
         <!-- Projets Section -->
-        <section class="projects">
+        <section class="section projects">
             <h2>Projets</h2>
             <div class="project-card">
                 <h4>Projet RH niveau de satisfaction Collaborateurs</h4>
-                <p>Exploitation et manipulation de bases de données pour calculer les KPIs de satisfaction et performance. Création de tableaux de bord interactifs avec Power BI.</p>
+                <p>Exploitation et manipulation de bases de données pour calculer les indicateurs de satisfaction et de performance (KPIs). Création de tableaux de bord interactifs avec Power BI.</p>
             </div>
             <div class="project-card">
                 <h4>Création de site de recommandation de films</h4>
                 <p>Implémentation de modèles de Machine Learning pour générer des recommandations personnalisées en utilisant Python, Pandas et Scikit-learn.</p>
             </div>
             <div class="project-card">
-                <h4>Analyse de base de données de vendeur de jouets</h4>
-                <p>Création de tableaux de bord interactifs et analyse des KPIs de ventes, RH, logistique, finance avec Power BI.</p>
+                <h4>Analyse d'une base de données de vendeur de jouets</h4>
+                <p>Création de tableaux de bord interactifs et analyse des KPIs (RH, logistique, finance) avec Power BI.</p>
             </div>
         </section>
+
         <!-- Formation Section -->
         <section class="section">
             <h2>Formation</h2>
@@ -177,17 +184,17 @@
         </section>
 
         <!-- Langues Section -->
-        <section class="languages">
+        <section class="section languages">
             <h2>Langues</h2>
             <ul>
                 <li>Français : Langue maternelle</li>
-                <li>Anglais : Courant </li>
-                <li>Mooré :Langue maternelle </li>
+                <li>Anglais : Courant</li>
+                <li>Mooré : Langue nationale du Burkina Faso</li>
             </ul>
         </section>
 
         <!-- Loisirs Section -->
-        <section class="hobbies">
+        <section class="section hobbies">
             <h2>Loisirs</h2>
             <ul>
                 <li>Lecture</li>
@@ -197,8 +204,8 @@
         </section>
 
         <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2025 Laetitia Palogo Compaoré - CV. </p>
+        <footer>
+            <p>&copy; 2025 Laetitia Palogo Compaoré - CV</p>
         </footer>
     </div>
 </body>
